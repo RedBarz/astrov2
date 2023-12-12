@@ -6,5 +6,6 @@ export default {
   ],
   pages: {
     "/counter": "./src/components/Counter.jsx",
+    "/carlist": "./src/components/CarList.jsx",
   },
 };
