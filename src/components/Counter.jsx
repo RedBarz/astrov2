@@ -1,5 +1,5 @@
 
-import CarList from './CarList'; // Remplacez 'CheminduFichier' par le chemin réel vers le fichier CarList.jsx
+import CarList from './CarList'; 
 
 const App = () => {
   return (
