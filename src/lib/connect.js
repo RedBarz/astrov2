@@ -9,7 +9,9 @@ const options = {};
 let cachedMongo;
 
 const connectToDB = async () => {
+  console.log("BIEN CONNECTER")
   const mongo = await new MongoClient(uri, options).connect();
+  console.log("MongoClient", mongo)
   // Change this to your own DB name of course.
   // Or better yet, put it in your .env
   return mongo.db(import.meta.env.MONGODB_DATABASE);
@@ -29,5 +31,6 @@ export const getDB = async () => {
     return cachedMongo;
   }
   const mongo = await connectToDB();
+  console.log("Mongo", mongo)
   return mongo;
 };

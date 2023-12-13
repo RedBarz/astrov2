@@ -1,6 +1,19 @@
 ---
-import Counter from '../components/Counter.jsx';
+import Layout from '../layouts/Layout.astro';
+import getCarsList from '../lib/getCarsList.js';
+import type Car from '../types/models.d.ts'
+
+const cars = await getCarsList()
+console.log('cars', cars.length);
 ---
 
-<Counter client:load />
 
+<Layout>
+    <h1>Liste des voitures</h1>
+        <ul>
+            {
+            cars.map((car: Car) => <li>{car.name}</li>)
+            }
+
+        </ul>
+</Layout>

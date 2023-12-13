@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getDB } from '../lib/connect';
+// import { getDB } from '../lib/connect';
 
 const CarList = () => {
     const [cars, setCars] = useState([]);
@@ -7,10 +7,10 @@ const CarList = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const db = await getDB();
-                const collection = db.collection('Voitures');
-                const carsData = await collection.find({}).toArray();
-                console.log('Data from MongoDB:', carsData);
+                // const db = await getDB();
+                // const collection = db.collection('Voitures');
+                // const carsData = await collection.find({}).toArray();
+                // console.log('Data from MongoDB:', carsData);
                 setCars(carsData);
             } catch (error) {
                 console.error('Error fetching data from MongoDB:', error);

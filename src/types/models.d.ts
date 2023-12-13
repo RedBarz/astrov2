@@ -1,5 +1,3 @@
-/// <reference types="astro/client" />
-
 interface Car {
     _id: import('bson').ObjectId;
     name: string;
@@ -7,4 +5,6 @@ interface Car {
     color: string;
     kilometre: number;
     year: Date;
+
 }
+export default Car

@@ -5,7 +5,9 @@ export default {
     react(),
   ],
   pages: {
-    "/counter": "./src/components/Counter.jsx",
-    "/carlist": "./src/components/CarList.jsx",
+    // "/counter": "./src/components/Counter.jsx",
+    // "/carlist": "./src/components/CarList.jsx",
   },
+  output: 'static'
 };
+
